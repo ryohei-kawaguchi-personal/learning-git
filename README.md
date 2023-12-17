@@ -109,5 +109,13 @@ hotfixブランチをmsterブランチにマージした直後は以下のイメ
 <img src="readme_image/image-10.png" width="50%">
 
 #### Merge Conflicts
-マージしている2つのブランチで同じファイルの同じ部分に異なる変更を加えた場合マージができない。
-feature2ブランチではこの行を追加
+マージしている2つのブランチで同じファイルの同じ部分に異なる変更を加えた場合マージができない  
+feature2ブランチではこの行を追加  
+feature1ブランチではこの行を追加  
+```
+$ git merge feature1
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+```
+<img src="readme_image/image-11.png" width="50%">
