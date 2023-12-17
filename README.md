@@ -99,5 +99,11 @@ HEADが指すブランチへのポインターが切り替わる
    ```
 
 2. hotfixブランチを作成する
-3. hotfixブランチをマージする
-4. 元の機能開発に戻る
+3. hotfixブランチをマージする  
+   マージ後はhotfixブランチを削除する  
+   `git branch -d hotfix`
+4. 元の機能開発に戻る  
+hotfixブランチをmsterブランチにマージした直後は以下のイメージ  
+<img src="readme_image/image-9.png" width="50%">  
+元の機能開発が終了しmasterブランチへマージすると以下のイメージ
+<img src="readme_image/image-10.png" width="50%">
