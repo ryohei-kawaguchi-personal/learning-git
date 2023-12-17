@@ -119,3 +119,24 @@ CONFLICT (content): Merge conflict in README.md
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 <img src="readme_image/image-11.png" width="50%">
+
+### ブランチ管理
+ローカル、リモートのブランチ名を変更したい場合  
+`git branch --move old-branch-name new-branch-name`  
+`git push origin new-branch-name`  
+`git push origin --delete old-branch-name`  
+リモートのブランチ名を取得したい場合  
+`git ls-remote`
+
+### Rebase
+C4で適用された修正をC3に再適用することができる  。
+<img src="readme_image/image-12.png" width="50%">  
+Gitの履歴をより単純にすることができる。最終的な成果物はマージの場合と変わらない。  
+
+**別の人が作業を行っている可能性があるコミットをリベースしてはいけない**  
+以下の状況を過程する  
+<img src="readme_image/image-13.png" width="50%">   
+そこでチームのメンバーがC6のコミットをC5のコミットにrebaseすると、自身のローカルリポジトリにはrebase後の履歴とrebase前の履歴の両方が存在することになってしまう    
+<img src="readme_image/image-14.png" width="50%">  
+ちなみに、このような状況に陥ってしまった場合は、`git rebase teamone/master`を実行することで以下のような履歴にすることができる。ただし、C4とC4'はほぼ同じでないと適用できない。
+<img src="readme_image/image-15.png" width="50%">  
