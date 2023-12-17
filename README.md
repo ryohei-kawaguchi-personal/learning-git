@@ -16,6 +16,9 @@ git勉強用のリポジトリ
       - [Merge Conflicts](#merge-conflicts)
     - [ブランチ管理](#ブランチ管理)
     - [Rebase](#rebase)
+  - [7章](#7章)
+    - [Stashing](#stashing)
+    - [Cleaning](#cleaning)
 
 
 ***
@@ -149,7 +152,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 `git pull --prune`
 
 ### Rebase
-C4で適用された修正をC3に再適用することができる  。
+C4で適用された修正をC3に再適用することができる。  
 <img src="readme_image/image-12.png" width="50%">  
 Gitの履歴をより単純にすることができる。最終的な成果物はマージの場合と変わらない。  
 
@@ -160,3 +163,7 @@ Gitの履歴をより単純にすることができる。最終的な成果物�
 <img src="readme_image/image-14.png" width="50%">  
 ちなみに、このような状況に陥ってしまった場合は、`git rebase teamone/master`を実行することで以下のような履歴にすることができる。ただし、C4とC4'はほぼ同じでないと適用できない。
 <img src="readme_image/image-15.png" width="50%">  
+
+## 7章
+### Stashing
+### Cleaning
