@@ -185,4 +185,15 @@ $ git status
 ブランチ section7
 nothing to commit, working tree clean
 ```
+その他stashコマンドの使い方
+- スタックに保存された変更を確認する  
+  `git stash list`  
+- 最新のスタックを取り出す  
+  `git stash apply`  
+- 特定のスタックを取り出す  
+  `git stash apply stash@{number}`  
+- 特定のスタックを消去する  
+  `git stash drop stash@{number}`  
+- スタックを取り出しつつ消去する  
+  `git stash pop`
 ### Cleaning
