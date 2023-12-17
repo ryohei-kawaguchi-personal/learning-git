@@ -166,5 +166,23 @@ Gitの履歴をより単純にすることができる。最終的な成果物�
 
 ## 7章
 ### Stashing
-ブランチを切り替える際に、今のブランチで行っている作業をコミットしたくない場合に`git stash`コマンドが使える。
+ブランチを切り替える際に、今のブランチで行っている作業をコミットしたくない場合に`git stash`コマンドが使える。  
+```
+$ git log --abbrev-commit --pretty=oneline -n 2
+bf260fd (HEAD -> main) Stashingのためにコミットを進める
+eb0ac39 (origin/main, origin/HEAD, section7) 7章を追加
+
+$ git status
+ブランチ section7
+コミット予定の変更点:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+$ git stash
+Saved working directory and index state WIP on section7: eb0ac39 7章を追加
+
+$ git status
+ブランチ section7
+nothing to commit, working tree clean
+```
 ### Cleaning
