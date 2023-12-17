@@ -107,3 +107,6 @@ hotfixブランチをmsterブランチにマージした直後は以下のイメ
 <img src="readme_image/image-9.png" width="50%">  
 元の機能開発が終了しmasterブランチへマージすると以下のイメージ
 <img src="readme_image/image-10.png" width="50%">
+
+#### Merge Conflicts
+マージしている2つのブランチで同じファイルの同じ部分に異なる変更を加えた場合マージができない。
