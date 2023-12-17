@@ -1,9 +1,25 @@
 # learning-git
-git勉強用のリポジトリ
+git勉強用のリポジトリ  
+**[公式Book](https://git-scm.com/book/en/v2)**
 
-## [公式Book](https://git-scm.com/book/en/v2)
+## 目次
+- [learning-git](#learning-git)
+  - [目次](#目次)
+  - [1章](#1章)
+    - [セットアップ](#セットアップ)
+  - [3章](#3章)
+    - [ブランチの概要](#ブランチの概要)
+        - [コミットとは何か？](#コミットとは何か)
+      - [新しいブランチを作成する](#新しいブランチを作成する)
+      - [現在のブランチの切り替え](#現在のブランチの切り替え)
+    - [基本的なBranchとMerge](#基本的なbranchとmerge)
+      - [Merge Conflicts](#merge-conflicts)
+    - [ブランチ管理](#ブランチ管理)
+    - [Rebase](#rebase)
+
+
 ***
-### 1章
+## 1章
 SVNなどのVCS(Version Control System)はファイル毎に変更履歴を保持している。
 
 <img src="readme_image/image.png" width="50%">
@@ -14,7 +30,7 @@ Gitはすべてのファイルの状態のスナップショットを撮り、�
 
 Gitはコミットデータを削除しない
 
-#### セットアップ
+### セットアップ
 下の設定が優先的に設定されていく
 - [path]/etc/gitconfig
   システム上のすべてのユーザーとそのすべてのリポジトリに適用される  
@@ -29,9 +45,9 @@ Gitはコミットデータを削除しない
 ※全ての設定を確認したいときは以下のコマンドを使う  
 `git config --list --show-origin`
 ***
-### 3章
+## 3章
 ### ブランチの概要
-#### コミットとは何か？
+##### コミットとは何か？
 コミットオブジェクト
 - ステージしたコンテンツのスナップショット(treeオブジェクト)へのポインター
 - 作成者
@@ -126,7 +142,11 @@ Automatic merge failed; fix conflicts and then commit the result.
 `git push origin new-branch-name`  
 `git push origin --delete old-branch-name`  
 リモートのブランチ名を取得したい場合  
-`git ls-remote`
+`git ls-remote`  
+`git branch -r`  
+※リモートのブランチがローカルに反映されない場合は以下のコマンドを実行する  
+`git remote prune origin`  
+`git pull --prune`
 
 ### Rebase
 C4で適用された修正をC3に再適用することができる  。
