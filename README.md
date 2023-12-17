@@ -166,4 +166,15 @@ Gitの履歴をより単純にすることができる。最終的な成果物�
 
 ## 7章
 ### Stashing
+Stashingを利用するためにこの行を追加  
+- スタックに保存された変更を確認する  
+  `git stash list`  
+- 最新のスタックを取り出す  
+  `git stash apply`  
+- 特定のスタックを取り出す  
+  `git stash apply stash@{number}`  
+- 特定のスタックを消去する  
+  `git stash drop stash@{number}`  
+- スタックを取り出しつつ消去する  
+  `git stash pop`
 ### Cleaning
