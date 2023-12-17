@@ -74,3 +74,30 @@ HEADが指すブランチへのポインターが切り替わる
 <img src="readme_image/image-8.png" width="50%">
 
 ### 基本的なBranchとMarge
+**ストーリー**  
+新しい機能を開発中、別の重要な問題が発生。hotfixが必要。次の流れで開発を行っていく。
+1. 本番ブランチに切り替える  
+   切り替えようとしているブランチと競合するコミットされていない変更がある場合、ブランチ切り替えはできない。  
+   例：本番ブランチにREADME.mdがあり、featureブランチでREADME.mdを変更しているとき
+   ```
+    $ git status
+    ブランチ feature
+    Your branch is up to date with 'origin/feature'.
+
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   README.md
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+    $ git checkout main 
+    error: Your local changes to the following files would be overwritten by checkout:
+            README.md
+    Please commit your changes or stash them before you switch branches.
+    Aborting
+   ```
+
+2. hotfixブランチを作成する
+3. hotfixブランチをマージする
+4. 元の機能開発に戻る
