@@ -196,4 +196,8 @@ nothing to commit, working tree clean
   `git stash drop stash@{number}`  
 - スタックを取り出しつつ消去する  
   `git stash pop`
+- 追跡されていないファイルをすべてスタックに入れる  
+  `git stash -a`
 ### Cleaning
+ビルド後のアーティファクトなど、追跡されていないファイルを全て削除したいとき  
+`git clean -fdx`
